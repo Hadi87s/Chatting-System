@@ -1,0 +1,72 @@
+.Text{
+    -fx-background-radius: 15;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-border-color: #3498DB;
+}
+
+.buttons {
+    -fx-background-color: #3498DB; /* Bright blue for the default state */
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.buttons:hover {
+    -fx-background-color: #2980B9; /* Slightly darker blue for hover state */
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+}
+#startListeningButton:hover {
+    -fx-background-color: rgba(52, 152, 219, 0.2); /* Light blue with transparency for hover effect */
+}
+
+#startListeningButton {
+    -fx-background-color: #3498DB; /* Bright Blue for the button background */
+    -fx-text-fill: white; /* White text for readability */
+    -fx-border-radius: 15;
+    -fx-border-color: #2980B9; /* Slightly darker blue for the border */
+    -fx-border-width: 2;
+}
+#sendButton{
+    -fx-background-color: #3498DB;
+}
+#sendButton:hover{
+    -fx-background-color: #2980B9;
+}
+.list-cell {
+    -fx-font-size: 15;
+}
+.list-cell:selected {
+    -fx-background-color: #2980B9; /* Set the background color of the selected cell */
+    -fx-text-fill: white; /* Set the text color of the selected cell */
+}
+.list-cell{
+    -fx-wrap-text: true;
+}
+.list-view{
+    -fx-wrap-text: true;
+}
+#Pane{
+    -fx-background-color: #2C3E50;
+}
+#Pane2{
+    -fx-background-color: #2C3E50;
+}
+
+#listID {
+    -fx-background-color: #FFFFFF; /* White background for the ComboBox */
+    -fx-text-fill: #2C3E50; /* Dark blue-gray text color for readability */
+    -fx-border-color: #3498DB; /* Bright blue border to match the button */
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+
+#listID .combo-box-popup {
+    -fx-background-color: #ECF0F1; /* Light gray for the dropdown background */
+}
+
+#listID .list-cell:filled:selected, #listID .list-cell:filled:hover {
+    -fx-background-color: #3498DB; /* Bright blue background for selected or hovered items */
+    -fx-text-fill: white; /* White text for selected or hovered items */
+}

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="UDPNetworkProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/UDPNetworkProject_jar</output-path>
+    <root id="archive" name="UDPNetworkProject.jar">
+      <element id="module-output" name="Networks 1 - Part2" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/21.0.1/javafx-graphics-21.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/21.0.1/javafx-fxml-21.0.1-mac.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/21.0.1/javafx-controls-21.0.1-mac.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/21.0.1/javafx-controls-21.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/21.0.1/javafx-base-21.0.1-mac.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/21.0.1/javafx-fxml-21.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/21.0.1/javafx-graphics-21.0.1-mac.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/21.0.1/javafx-base-21.0.1.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/../UDP/src/main/java/org/example/networkshw/UDPServer.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/../UDP/src/main/java/org/example/networkshw/ClientController.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/../UDP/src/main/java/org/example/networkshw/Client.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/../UDP/src/main/resources/org/example/networkshw/ClientGUI.fxml" />
+    </root>
+  </artifact>
+</component>

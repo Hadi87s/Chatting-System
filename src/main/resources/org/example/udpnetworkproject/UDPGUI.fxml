@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1000.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.udpnetworkproject.UDPController">
+   <children>
+      <ListView fx:id="message" layoutX="35.0" layoutY="193.0" maxWidth="379.0" prefHeight="366.0" prefWidth="378.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 5;" />
+      <Button fx:id="sendButton" layoutX="364.0" layoutY="593.0" minWidth="48.0" mnemonicParsing="false" onAction="#send" prefHeight="41.0" prefWidth="66.0" styleClass="buttons" stylesheets="@../../../../../Networks%201%20-%20Part1/src/main/resources/org/example/udpnetworkproject/stylesheet.css" text="Send" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Text fill="WHITE" layoutX="46.0" layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="66.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="status" editable="false" layoutX="109.0" layoutY="670.0" prefHeight="35.0" prefWidth="304.0" styleClass="Text">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Text fill="WHITE" layoutX="567.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Local IP" wrappingWidth="66.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="localIP" layoutX="662.0" layoutY="42.0" prefHeight="30.0" prefWidth="150.0" styleClass="Text">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Text fill="WHITE" layoutX="567.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Local Port" wrappingWidth="86.99999999999994">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="localPort" layoutX="662.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0" styleClass="Text">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Text fill="WHITE" layoutX="712.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remote IP" wrappingWidth="97.79999999999995">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="remoteIP" disable="true" layoutX="815.0" layoutY="180.0" prefHeight="30.0" prefWidth="140.0" styleClass="Text">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Text fill="WHITE" layoutX="704.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remote Port" wrappingWidth="151.8604736328125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="remotePort" disable="true" layoutX="815.0" layoutY="233.0" prefHeight="30.0" prefWidth="140.0" styleClass="Text">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <ListView fx:id="Archive" layoutX="440.0" layoutY="462.0" prefHeight="187.0" prefWidth="260.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 5;" />
+      <Button fx:id="testButton" layoutX="803.0" layoutY="300.0" mnemonicParsing="false" onAction="#test" prefHeight="40.0" prefWidth="157.0" styleClass="buttons" text="Test">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="572.0" layoutY="406.0" mnemonicParsing="false" onAction="#delete" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="restoreButton" layoutX="570.0" layoutY="357.0" mnemonicParsing="false" onAction="#restore" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" text="Restore">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteConvoButton" layoutX="431.0" layoutY="356.0" mnemonicParsing="false" onAction="#deleteConvo" prefHeight="35.0" prefWidth="130.0" styleClass="buttons" text="Delete Chat">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="startListeningButton" layoutX="439.0" layoutY="667.0" mnemonicParsing="false" onAction="#startListening" prefHeight="35.0" prefWidth="140.0" styleClass="buttons" text="Start listening">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="436.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available interfaces:" wrappingWidth="244.68253639461955">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="interfaces" layoutX="433.0" layoutY="309.0" prefHeight="30.0" prefWidth="346.0" style="-fx-background-color: white; -fx-border-radius: 15; -fx-border-color: black; -fx-background-radius: 15;" />
+      <ProgressIndicator fx:id="loading" layoutX="550.0" layoutY="189.0" prefHeight="54.0" prefWidth="27.0" visible="false" />
+      <TextArea fx:id="messageBox" layoutX="36.0" layoutY="570.0" prefHeight="88.0" prefWidth="320.0" promptText="Send a Message" style="-fx-background-radius: 100; -fx-border-radius: 5; -fx-border-color: black; -fx-border-width: 1;" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextArea>
+      <ListView fx:id="onlineUsers" layoutX="730.0" layoutY="355.0" maxWidth="379.0" prefHeight="367.0" prefWidth="246.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 5;" />
+      <Text fill="WHITE" layoutX="38.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="116.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="125.0" layoutY="43.0" prefHeight="35.0" prefWidth="120.0" styleClass="Text">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="loginButton" layoutX="458.0" layoutY="41.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="88.0" styleClass="buttons" text="Login">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Text fx:id="lastLogin" fill="WHITE" layoutX="36.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last login by " wrappingWidth="417.13336181640625">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="429.0" layoutY="406.0" mnemonicParsing="false" onAction="#sendToAll" prefHeight="35.0" prefWidth="130.0" styleClass="buttons" text="Send To All">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="249.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="116.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="logoutButton" layoutX="458.0" layoutY="95.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="88.0" styleClass="buttons" text="Logout">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordTextField" layoutX="332.0" layoutY="43.0" prefHeight="35.0" prefWidth="120.0" styleClass="Text">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <Text fill="WHITE" layoutX="432.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TCP Server IP" wrappingWidth="118.20000000000005">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tcpServerIP" layoutX="549.0" layoutY="178.0" prefHeight="30.0" prefWidth="140.0" styleClass="Text">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="438.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TCP  Port" wrappingWidth="97.31942355145179">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tcpServerPort" layoutX="549.0" layoutY="236.0" prefHeight="30.0" prefWidth="140.0" styleClass="Text">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Text fx:id="userStatusLabel" fill="WHITE" layoutX="38.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Status:" wrappingWidth="172.2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ComboBox id="listID" fx:id="statusComboBox" accessibleRole="CHECK_BOX" layoutX="220.0" layoutY="97.0" onAction="#handleStatusChange" prefHeight="34.0" prefWidth="229.0" stylesheets="@stylesheet.css" />
+   </children>
+</AnchorPane>
